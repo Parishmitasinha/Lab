@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="red">#ED1E1E</color>
+    <color name="pink">#EA4B81</color>
+    <color name="buttonBackgroundColor">#FF5722</color>
+    <color name="paste">#787847</color>
+    <color name="fire_brick_200">#B6664C</color>
+    <color name="Green">#38D50D</color>
+    <color name="GG">#5C8787</color>
+</resources>
