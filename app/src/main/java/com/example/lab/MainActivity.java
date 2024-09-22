@@ -25,6 +25,14 @@ public class MainActivity extends AppCompatActivity {
 
         buttonShowToast.setOnClickListener(v -> Toast.makeText(MainActivity.this, "Left button is clicked", Toast.LENGTH_SHORT).show());
 
+        buttonShowToast.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Left button is clicked", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
         buttonShowCustomToast.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,8 +58,6 @@ public class MainActivity extends AppCompatActivity {
                 customToast.show();
             }
         });
-
-        // Navigate to FeedbackActivity
         buttonFeedback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,5 +65,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
 }
