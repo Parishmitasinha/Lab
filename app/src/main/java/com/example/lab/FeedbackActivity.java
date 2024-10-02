@@ -6,6 +6,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RatingBar;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,6 +21,7 @@ public class FeedbackActivity extends AppCompatActivity {
     private Button increment, decrement, submitFeedback;
     private EditText commentsEditText;
     private RatingBar ratingBar;
+    private Switch notificationSwitch; // Added Switch to control comments visibility
 
     private int quantity = 0;
     private ArrayList<String> selectedSnacks = new ArrayList<>();
@@ -40,6 +42,11 @@ public class FeedbackActivity extends AppCompatActivity {
         increment = findViewById(R.id.increment);
         decrement = findViewById(R.id.decrement);
         submitFeedback = findViewById(R.id.submitFeedbackButton);
+        notificationSwitch = findViewById(R.id.notificationSwitch); // Initialize the Switch
+
+        // Set default visibility of comments EditText
+        commentsEditText.setVisibility(View.GONE); // Hide initially
+
         increment.setOnClickListener(v -> {
             quantity++;
             updateQuantityDisplay();
@@ -58,6 +65,15 @@ public class FeedbackActivity extends AppCompatActivity {
 
         ratingBar.setOnRatingBarChangeListener((ratingBar, rating, fromUser) -> {
             ratingText.setText("Rating: " + rating);
+        });
+
+        // Toggle comments visibility based on Switch state
+        notificationSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked) {
+                commentsEditText.setVisibility(View.VISIBLE); // Show comments section
+            } else {
+                commentsEditText.setVisibility(View.GONE); // Hide comments section
+            }
         });
 
         // Submit feedback
@@ -98,5 +114,7 @@ public class FeedbackActivity extends AppCompatActivity {
         popcorn.setChecked(false);
         candy.setChecked(false);
         drinks.setChecked(false);
+        notificationSwitch.setChecked(false);
+        commentsEditText.setVisibility(View.GONE); // Hide comments again
     }
 }

@@ -5,10 +5,13 @@
     <color name="yellow">#FFFF00</color>
     <color name="red">#ED1E1E</color>
     <color name="pink">#EA4B81</color>
-    <color name="buttonBackgroundColor">#FF5722</color>
+    <color name="buttonBackgroundColor">#DC5A31</color>
     <color name="paste">#787847</color>
     <color name="fire_brick_200">#B6664C</color>
     <color name="Green">#38D50D</color>
+    <color name="purssian_blue_700">#BA5E40</color>
     <color name="GG">#5C8787</color>
     <color name="Green2">#38D50D</color>
+    <color name="colorPrimary">#1F9DAE</color>
+
 </resources>

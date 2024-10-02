@@ -21,7 +21,8 @@ public class MainActivity extends AppCompatActivity {
         Button buttonShowToast = findViewById(R.id.buttonShowToast);
         Button buttonShowCustomToast = findViewById(R.id.buttonShowCustomToast);
         Button showRTheChange = findViewById(R.id.showRTheChange);
-        Button buttonFeedback = findViewById(R.id.buttonFeedback); // New button for feedback activity
+        Button buttonFeedback = findViewById(R.id.buttonFeedback);
+        Button buttonForm = findViewById(R.id.buttonForm);// New button for feedback activity
 
         buttonShowToast.setOnClickListener(v -> Toast.makeText(MainActivity.this, "Left button is clicked", Toast.LENGTH_SHORT).show());
 
@@ -62,6 +63,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, FeedbackActivity.class);
+                startActivity(intent);
+            }
+        });
+        buttonForm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, FormActivity.class);
                 startActivity(intent);
             }
         });

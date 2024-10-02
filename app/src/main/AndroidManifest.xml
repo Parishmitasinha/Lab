@@ -12,6 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Lab"
         tools:targetApi="31">
+        <activity android:name=".FormActivity"
+            android:exported="false"/>
         <activity
             android:name=".FeedbackActivity"
             android:exported="false" />

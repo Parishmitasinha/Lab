@@ -1,3 +1,4 @@
 <resources>
+    <string name="student_information">Student Information</string>
     <string name="app_name">Lab</string>
 </resources>

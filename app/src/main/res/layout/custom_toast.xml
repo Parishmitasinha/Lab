@@ -4,18 +4,20 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="100dp"
-    android:background="@drawable/greenbackground"
-    android:gravity="center_horizontal">
+    android:background="@color/fire_brick_200"
+    android:layout_gravity="center">
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:src="@drawable/download3"/>
     <TextView
         android:id="@+id/customToastTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="HELLO"
+        android:textStyle="bold"
+        android:layout_gravity="center"
         android:textColor="@color/white"
-        android:layout_marginTop="10dp"
-        android:gravity="center"/>
+        android:layout_marginTop="10dp"/>
 </LinearLayout>
