@@ -1,4 +1,27 @@
 <resources>
-    <string name="student_information">Student Information</string>
-    <string name="app_name">Lab</string>
+    <string name="Lab" />
+    <string-array name="product_categories">
+        <item>Smart Devices</item>
+        <item>Entertainment</item>
+    </string-array>
+
+    <string-array name="smart_devices">
+        <item>Smartphone</item>
+        <item>Laptop</item>
+        <item>Smartwatch</item>
+        <item>Tablet</item>
+    </string-array>
+
+    <string-array name="entertainment">
+        <item>Smart TV</item>
+    </string-array>
+
+    <string-array name="product_descriptions">
+        <item>Latest Android smartphone with high-resolution display and 5G support.</item>
+        <item>High-performance laptop suitable for gaming and productivity tasks.</item>
+        <item>Wearable smartwatch with health tracking and notification features.</item>
+        <item>Tablet with a large screen, perfect for media consumption and productivity on the go.</item>
+        <item>Smart TV with 4K resolution and built-in streaming services.</item>
+    </string-array>
+
 </resources>

@@ -22,56 +22,45 @@ public class MainActivity extends AppCompatActivity {
         Button buttonShowCustomToast = findViewById(R.id.buttonShowCustomToast);
         Button showRTheChange = findViewById(R.id.showRTheChange);
         Button buttonFeedback = findViewById(R.id.buttonFeedback);
-        Button buttonForm = findViewById(R.id.buttonForm);// New button for feedback activity
+        Button buttonForm = findViewById(R.id.buttonForm);
+        Button buttonProduct = findViewById(R.id.buttonProduct);
+        Button buttonOpenProductList =findViewById(R.id.buttonOpenProductList);
+        buttonShowToast.setOnClickListener(v ->
+                Toast.makeText(MainActivity.this, "Left button is clicked", Toast.LENGTH_SHORT).show()
+        );
 
-        buttonShowToast.setOnClickListener(v -> Toast.makeText(MainActivity.this, "Left button is clicked", Toast.LENGTH_SHORT).show());
+        buttonShowCustomToast.setOnClickListener(v -> Toast.makeText(MainActivity.this, "Right button is clicked", Toast.LENGTH_SHORT).show());
 
-        buttonShowToast.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Left button is clicked", Toast.LENGTH_SHORT).show();
-            }
+        showRTheChange.setOnClickListener(v -> {
+            Toast.makeText(MainActivity.this, "Changing successful", Toast.LENGTH_SHORT).show();
+
+            LayoutInflater inflater = getLayoutInflater();
+            View customToastView = inflater.inflate(R.layout.custom_toast, null);
+
+            TextView toastTextView = customToastView.findViewById(R.id.customToastTextView);
+            toastTextView.setText("HELLO");
+            Toast customToast = new Toast(MainActivity.this);
+            customToast.setView(customToastView);
+            customToast.setGravity(Gravity.CENTER, 0, 0);
+            customToast.setDuration(Toast.LENGTH_SHORT);
+            customToast.show();
+        });
+        buttonFeedback.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, FeedbackActivity.class);
+            startActivity(intent);
         });
 
-
-        buttonShowCustomToast.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Right button is clicked", Toast.LENGTH_SHORT).show();
-            }
+        buttonForm.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, FormActivity.class);
+            startActivity(intent);
         });
-
-        showRTheChange.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Changing successful", Toast.LENGTH_SHORT).show();
-
-                LayoutInflater inflater = getLayoutInflater();
-                View customToastView = inflater.inflate(R.layout.custom_toast, null);
-
-                TextView toastTextView = customToastView.findViewById(R.id.customToastTextView);
-                toastTextView.setText("HELLO");
-
-                Toast customToast = new Toast(MainActivity.this);
-                customToast.setView(customToastView);
-                customToast.setGravity(Gravity.CENTER, 0, 0);
-                customToast.setDuration(Toast.LENGTH_SHORT);
-                customToast.show();
-            }
+        buttonProduct.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, ProductActivity.class);
+            startActivity(intent);
         });
-        buttonFeedback.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, FeedbackActivity.class);
-                startActivity(intent);
-            }
-        });
-        buttonForm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, FormActivity.class);
-                startActivity(intent);
-            }
+        buttonOpenProductList.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, ExpandableListActivity.class);
+            startActivity(intent);
         });
 
     }

@@ -68,5 +68,18 @@
         android:backgroundTint="@color/paste"
         android:textColor="@color/white"
         android:text="Create a Form"/>
+    <Button
+        android:id="@+id/buttonProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/paste"
+        android:textColor="@color/white"
+        android:text="Go to product Section"/>
+    <Button
+        android:id="@+id/buttonOpenProductList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/paste"
+        android:text="View Products" />
 
 </LinearLayout>
