@@ -81,5 +81,12 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/paste"
         android:text="View Products" />
+    <Button
+        android:id="@+id/buttonGoToRecyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go to RecyclerView"
+        android:backgroundTint="@color/paste"
+        android:layout_marginTop="20dp"/>
 
 </LinearLayout>

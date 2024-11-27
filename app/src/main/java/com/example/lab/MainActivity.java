@@ -24,12 +24,21 @@ public class MainActivity extends AppCompatActivity {
         Button buttonFeedback = findViewById(R.id.buttonFeedback);
         Button buttonForm = findViewById(R.id.buttonForm);
         Button buttonProduct = findViewById(R.id.buttonProduct);
-        Button buttonOpenProductList =findViewById(R.id.buttonOpenProductList);
+        Button buttonOpenProductList = findViewById(R.id.buttonOpenProductList);
+
+        // New Button for RecyclerView Activity
+        Button buttonGoToRecyclerView = findViewById(R.id.buttonGoToRecyclerView);
+
+        // New Help Button
+        Button buttonHelp = findViewById(R.id.buttonHelp);
+
         buttonShowToast.setOnClickListener(v ->
                 Toast.makeText(MainActivity.this, "Left button is clicked", Toast.LENGTH_SHORT).show()
         );
 
-        buttonShowCustomToast.setOnClickListener(v -> Toast.makeText(MainActivity.this, "Right button is clicked", Toast.LENGTH_SHORT).show());
+        buttonShowCustomToast.setOnClickListener(v ->
+                Toast.makeText(MainActivity.this, "Right button is clicked", Toast.LENGTH_SHORT).show()
+        );
 
         showRTheChange.setOnClickListener(v -> {
             Toast.makeText(MainActivity.this, "Changing successful", Toast.LENGTH_SHORT).show();
@@ -45,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
             customToast.setDuration(Toast.LENGTH_SHORT);
             customToast.show();
         });
+
         buttonFeedback.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, FeedbackActivity.class);
             startActivity(intent);
@@ -54,14 +64,20 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, FormActivity.class);
             startActivity(intent);
         });
+
         buttonProduct.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, ProductActivity.class);
             startActivity(intent);
         });
+
         buttonOpenProductList.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, ExpandableListActivity.class);
             startActivity(intent);
         });
 
+        buttonGoToRecyclerView.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, RecyclerViewActivity.class);
+            startActivity(intent);
+        });
     }
 }

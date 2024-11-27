@@ -84,7 +84,7 @@ public class ExpandableListActivity extends AppCompatActivity {
         smartDeviceList.add(smartDevices[3]);
 
 
-        entertainmentList.add(entertainment[0]);  // Smart TV
+        entertainmentList.add(entertainment[0]);
 
 
         childData.put(groupData.get(0), smartDeviceList);
